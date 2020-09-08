@@ -5,10 +5,10 @@ function setup() {
 //circle 1
     
     let xPos = 0;
-    let yPos = 40;
+    let yPos = 200;
 
     let xSpeed = 5;
-    let ySpeed = 5;
+    let ySpeed = 0;
 
     function draw(){
         background(214,187,174);
@@ -36,29 +36,21 @@ function setup() {
                 ySpeed = -5;
                fill(221,130,106);
             }
-    //bounce 
+    //wrap 
             if (xPos > width) {
-                xSpeed = -5;
+                xPos = 0;
             }
-
             if (yPos > height) {
-                ySpeed = -5;
-            }
-            if (xPos < 0) {
-                xSpeed = 5;
-            }
-
-            if (yPos < 0) {
-                ySpeed = 5;
+                yPos = 0;
             }
 
 
-            circle(xPos, yPos, 20);
+            circle(xPos, yPos, 50);
 
     //words
             textSize(20);
             fill(255,255,255);  
-            text('Use Arrow Keys', 350, 250);
+            text('World Wrap', 350, 250);
             textAlign(CENTER, CENTER)
             
             }
