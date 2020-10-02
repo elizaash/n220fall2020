@@ -24,7 +24,7 @@ function setup() {
 
     function draw(){
 
-        background(214,187,174);
+        background('#8e9185');
 
         //circle
             circleX = circleX + circleXSpeed;
@@ -70,65 +70,60 @@ function setup() {
                         result = collideRect(0, 40, 0, 550, 150, 20);   
 
 
-                    //bounce off rect
+    //bounce off rect
 
-                        if(collideRect(circleX, circleY, rectX, rectY, rectW, rectH)){
-                            circleXSpeed = -4;
-                            
-                            }
-                        
-                        if(collideRect(circleX, circleY, rectX, rectY, rectW, rectH)){
-                            circleYSpeed = -4;
-                            
-                            }
+        if(collideRect(circleX, circleY, rectX, rectY, rectW, rectH)){
+            circleXSpeed = -4;
+            
+            }
+        
+        if(collideRect(circleX, circleY, rectX, rectY, rectW, rectH)){
+            circleYSpeed = -4;
+            
+            }
 
-                    //bounce off walls
+    //bounce off walls
 
-                    if (circleX > width) {
-                                    circleXSpeed = -5;
-                                }
-                    
-                                if (circleY > height) {
-                                    circleYSpeed = -5;
-                                }
-                                if (circleX < 0) {
-                                    circleXSpeed = 5;
-                                }
-                    
-                                if (circleY < 0) {
-                                    circleYSpeed = 5;
-                                }
+        if (circleX > width) {
+            circleXSpeed = -5;
+            }
+
+        if (circleY > height) {
+            circleYSpeed = -5;
+            }
+        if (circleX < 0) {
+            circleXSpeed = 5;
+            }
+
+        if (circleY < 0) {
+            circleYSpeed = 5;
+            }
+
+     //key movements
+            if(keyIsDown(LEFT_ARROW)) {
+                rectXSpeed = -5;
+                fill(255,211,168);
+            }
+
+            if(keyIsDown(RIGHT_ARROW)) {
+                rectXSpeed = 5;
+                fill(255,255,255);
+            }
+
+    //text        
+            textSize(20);
+            fill(255,255,255);  
+            textFont('Georgia');
+            text('PONG', 350, 250);
+            textAlign(CENTER, CENTER) 
+            
+            textSize(20);
+            fill(255,255,255);  
+            textFont('Georgia');
+            text('use <> arrows', 350, 275);
+            textAlign(CENTER, CENTER)  
 
                     
         console.log(collideRect());                  
      }
 
-
-
-
-
-
-
-
-
-
-
-
-    
-    // bounce example from lab 2
-    //         
-
-   
-    //wrap example from lab
-                // if (xPos > width) {
-                //     xPos = 0;
-                // }
-                // if (yPos > height) {
-                //     yPos = 0;
-                // }
-
-
-
-  
-    
- 
