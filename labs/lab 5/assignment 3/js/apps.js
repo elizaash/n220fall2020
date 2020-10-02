@@ -111,7 +111,7 @@ function setup() {
             }
 
     //text        
-            textSize(20);
+            textSize(25);
             fill(255,255,255);  
             textFont('Georgia');
             text('PONG', 350, 250);
@@ -120,7 +120,7 @@ function setup() {
             textSize(20);
             fill(255,255,255);  
             textFont('Georgia');
-            text('use <> arrows', 350, 275);
+            text('use <> arrows', 350, 280);
             textAlign(CENTER, CENTER)  
 
                     
