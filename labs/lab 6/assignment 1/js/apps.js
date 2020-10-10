@@ -1,4 +1,5 @@
 
+
 // var cx = 20;
 // var cy = 30;
 // var circleColor = [199, 137, 80];
@@ -9,10 +10,10 @@ var myCircle = {
     x: 20,
     y: 30,
     color: [199, 137, 80],
-    speed:.2,
+    //speed:.2,
     update: function () {
         fill(this.color);
-        this.x += this.speed;
+        //this.x += this.speed;
         circle(this.x, this.y, this.r);
     }
 }
@@ -26,4 +27,3 @@ function draw() {
     
     myCircle.update();
 }
-
