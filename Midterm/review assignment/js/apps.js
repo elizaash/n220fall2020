@@ -24,7 +24,7 @@ function setup() {
 
     function draw(){
 
-        background('#8e9185');
+        background('#309898');
 
         //circle
             circleX = circleX + circleXSpeed;
@@ -99,12 +99,11 @@ function setup() {
      //key movements
             if(keyIsDown(UP_ARROW)) {
                 rectYSpeed = -5;
-                fill(255,211,168);
             }
 
             if(keyIsDown(DOWN_ARROW)) {
                 rectYSpeed = 5;
-                fill(255,255,255);
+                
             }
 
 
@@ -123,7 +122,7 @@ function setup() {
     //text        
             textSize(25);
             fill(255,255,255);  
-            textFont('Impact');
+            textFont('Lucida Sans Unicode');
             text('PONGISH', 350, 250);
             textAlign(CENTER, CENTER) 
             
