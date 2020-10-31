@@ -66,33 +66,49 @@
 
     //OBJECT 2 : DRIPPING WATER
 
-    var circles = [
-        {x: 100, y: 20, r: 5},
-        {x: 20, y: 50, r: 50},
-        {x: 150, y: 200, r: 25},
-        {x: 300, y: 250, r: 100},
-    ];
+    // var circles = [
+    //     {x: 100, y: 20, r: 5},
+    //     {x: 20, y: 50, r: 50},
+    //     {x: 150, y: 200, r: 25},
+    //     {x: 300, y: 250, r: 100},
+    // ];
 
-    function setup(){
-        createCanvas(400,300);
-        noStroke();
-        fill(200);
-    }
+    // function setup(){
+    //     createCanvas(400,300);
+    //     noStroke();
+    //     fill(200);
+    // }
 
-    function draw() {
-        for (var i = 0; i < circles.length; i++) {
-            let currentCircle = circles[i];
-            circle(currentCircle.x,currentCircle.y,currentCircle.r);
-            //drip
-            currentCircle.y += 2;
+    // function draw() {
+    //     for (var i = 0; i < circles.length; i++) {
+    //         let currentCircle = circles[i];
+    //         circle(currentCircle.x,currentCircle.y,currentCircle.r);
+    //         //drip
+    //         currentCircle.y += 2;
 
-            if(currentCircle.y > 300) {
-                currentCircle.y = 0;
-                currentCircle.x = Math.random() * 400;
-                fill(Math.random() * 255)
-            }
+    //         if(currentCircle.y > 300) {
+    //             currentCircle.y = 0;
+    //             currentCircle.x = Math.random() * 400;
+    //             fill(Math.random() * 255)
+    //         }
 
-        }  
+    //     }  
        
-    }
+    // }
+//____________________________________________________________________________________
 
+//INPUTS & INTERACTION
+
+let txtDieSize = document.getElementById("txtDieSize");
+let dvResult = document.getElementById("dvResult");
+
+
+function rollDie() {
+    let dieSize = Number(txtDieSize.value);
+    let randRoll = 1 + Math.floor(Math.random() * dieSize);
+    
+    console.log(randRoll);
+    dvResult.innerHTML = randRoll;
+
+    txtDieSize.value = "";
+}
