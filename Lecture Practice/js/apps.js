@@ -99,16 +99,64 @@
 
 //INPUTS & INTERACTION
 
-let txtDieSize = document.getElementById("txtDieSize");
-let dvResult = document.getElementById("dvResult");
+// let txtDieSize = document.getElementById("txtDieSize");
+// let dvResult = document.getElementById("dvResult");
 
 
-function rollDie() {
-    let dieSize = Number(txtDieSize.value);
-    let randRoll = 1 + Math.floor(Math.random() * dieSize);
+// function rollDie() {
+//     let dieSize = Number(txtDieSize.value);
+//     let randRoll = 1 + Math.floor(Math.random() * dieSize);
     
-    console.log(randRoll);
-    dvResult.innerHTML = randRoll;
+//     console.log(randRoll);
+//     dvResult.innerHTML = randRoll;
 
-    txtDieSize.value = "";
+//     txtDieSize.value = "";
+// }
+//___________________________________________________________________________________
+
+//DOM MANIPULATION & CSS
+let dvCoin = document.getElementById("coin"); 
+
+dvCoin.innerHTML = "tails";
+dvCoin.style.backgroundColor = "#ebcf34";
+dvCoin.style.width = "100px";
+dvCoin.style.height = "100px";
+
+function flipCoin() {
+
+    //do a coin flip
+    let flip = Math.random();
+    let side = "heads";
+    if(flip > .5) side = "tails";
+
+    //change background in innerHTML
+    dvCoin.innerHTML = side;
+
+    //chang bg color based on result
+    if(side == "tails") {
+        dvCoin.style.backgroundColor = "#eb5634";
+    } else { 
+        dvCoin.style.backgroundColor = "#ebcf34";
+    }
+
+    //record result in resuult list
+        //MAKE AN ELEMENT
+        let newEl = document.createElement("div");
+
+        //CUSTOMIZE
+        newEl.innerHTML = side;
+        newEl.style.backgroundColor = "#ebcf34";
+        newEl.style.width = "40px";
+        newEl.style.float = "left";
+        newEl.style.margin = "3px"
+
+        //PLACE OJECT ON PAGE
+        document.body.appendChild(newEl);   
+
 }
+
+
+
+
+
+    
