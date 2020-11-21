@@ -114,49 +114,127 @@
 // }
 //___________________________________________________________________________________
 
-//DOM MANIPULATION & CSS
-let dvCoin = document.getElementById("coin"); 
+// //DOM MANIPULATION & CSS
+// let dvCoin = document.getElementById("coin"); 
 
-dvCoin.innerHTML = "tails";
-dvCoin.style.backgroundColor = "#ebcf34";
-dvCoin.style.width = "100px";
-dvCoin.style.height = "100px";
+// dvCoin.innerHTML = "tails";
+// dvCoin.style.backgroundColor = "#ebcf34";
+// dvCoin.style.width = "100px";
+// dvCoin.style.height = "100px";
 
-function flipCoin() {
+// function flipCoin() {
 
-    //do a coin flip
-    let flip = Math.random();
-    let side = "heads";
-    if(flip > .5) side = "tails";
+//     //do a coin flip
+//     let flip = Math.random();
+//     let side = "heads";
+//     if(flip > .5) side = "tails";
 
-    //change background in innerHTML
-    dvCoin.innerHTML = side;
+//     //change background in innerHTML
+//     dvCoin.innerHTML = side;
 
-    //chang bg color based on result
-    if(side == "tails") {
-        dvCoin.style.backgroundColor = "#eb5634";
-    } else { 
-        dvCoin.style.backgroundColor = "#ebcf34";
-    }
+//     //chang bg color based on result
+//     if(side == "tails") {
+//         dvCoin.style.backgroundColor = "#eb5634";
+//     } else { 
+//         dvCoin.style.backgroundColor = "#ebcf34";
+//     }
 
-    //record result in resuult list
-        //MAKE AN ELEMENT
-        let newEl = document.createElement("div");
+//     //record result in resuult list
+//         //MAKE AN ELEMENT
+//         let newEl = document.createElement("div");
 
-        //CUSTOMIZE
-        newEl.innerHTML = side;
-        newEl.style.backgroundColor = "#ebcf34";
-        newEl.style.width = "40px";
-        newEl.style.float = "left";
-        newEl.style.margin = "3px"
+//         //CUSTOMIZE
+//         newEl.innerHTML = side;
+//         newEl.style.backgroundColor = "#ebcf34";
+//         newEl.style.width = "40px";
+//         newEl.style.float = "left";
+//         newEl.style.margin = "3px"
 
-        //PLACE OJECT ON PAGE
-        document.body.appendChild(newEl);   
+//         //PLACE OJECT ON PAGE
+//         document.body.appendChild(newEl);   
+
+// }
+
+//________________________________________________________
+
+//ARRAYS: SPLITTING STRINGS
+// var txtSentence = document.getElementById("txtSentence");
+// var txtOutput = document.getElementById("txtOutput")
+
+
+
+// function breakString() {
+
+//     var inputString = txtSentence.value;
+//     var splitString = inputString.split(" ");
+
+//     txtOutput.innerHTML = splitString[0];
+
+// }
+
+//_____________________________________________________
+//ARRAYS SEARCHING ARRAYS 
+
+// var guesses = [12, 7, 18, 5, 2 ];
+// var foundFlag = false;
+
+// for( var i = 0; i < guesses.length; i++) {
+//     var curGuess = guesses[i];
+//     console.log(curGuess);
+
+//     if(curGuess == 5) {
+//         foundFlag = true;
+//         break; //stop looping
+//     }
+// }
+
+//_____________________________________________________
+//ARRAYS : CONDENSING 
+
+// var guesses = [12, 7, 18, 5, 2 ];
+
+// var sum = 0;
+
+
+// for( var i = 0; i < guesses.length; i++) {
+//     var curGuess = guesses[i];
+//     sum = sum + curGuess;
+    
+//     //adds numbers tpgether each time it loops
+
+// }
+
+//_____________________________________________________
+//ARRAYS : COMPOUND DATA
+//array of objects
+var pizzas = [
+    { name: "Pep" , price: 12 },  
+    { name: "Cheese" , price: 9 },  
+    { name: "mush" , price: 11 },
+
+    { name: "supreme" , price: 19 },
+
+]
+
+for( var i = 0; i < pizzas.length; i++) {
+    var curPizza = pizzas[i];
+
+    //make a new element for that pizza
+
+    var newEl = document.createElement("div");
+
+    //customize
+    newEl.innerHTML = curPizza.name + ": $" + curPizza.price;
+    newEl.backgroundColor = "FFFFFF";
+
+    //add to the page
+
+    document.body.appendChild(newEl);
+
+
 
 }
 
 
-
-
-
-    
+//this is how you call something from the array of objects 
+console.log(pizzas[0].name);
