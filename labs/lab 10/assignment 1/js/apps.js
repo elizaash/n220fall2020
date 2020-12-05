@@ -242,17 +242,36 @@
 // ___________________________________________________________________
 // EVENTS 
 
-let element = document.getElementById("eventTest");
+let element = document.getElementById("squareOne");
 element.addEventListener("click",itsClicked);
+element.style.backgroundColor = "#808080";
+element.style.width = "200px";
+element.style.height = "200px";
+element.style.float = "left";
+element.style.margin = "5px";
 
+let elementTwo = document.getElementById("squareTwo");
+elementTwo.addEventListener("click",itsClicked);
+elementTwo.style.backgroundColor = "#808080";
+elementTwo.style.width = "200px";
+elementTwo.style.height = "200px";
+elementTwo.style.float = "left";
+elementTwo.style.margin = "5px";
 
+let elementThree = document.getElementById("squareThree");
+elementThree.addEventListener("click",itsClicked);
+elementThree.style.backgroundColor = "#808080";
+elementThree.style.width = "200px";
+elementThree.style.height = "200px";
+elementThree.style.float = "left";
+elementThree.style.margin = "5px";
 
 function itsClicked(event) { 
-   
-   event.target.style.backgroundColor = "#999";
-
-    //get the attribute
     let response = event.target.getAttribute("data-response");
-    event.target.innerHTML = response;
+    event.target.style.backgroundColor = response;
+    event.target.innerHTML = "Hooray!";
+
+    console.log(response);
 
 }
+

@@ -242,17 +242,20 @@
 // ___________________________________________________________________
 // EVENTS 
 
-let element = document.getElementById("eventTest");
+let element = document.getElementById("squareOne");
 element.addEventListener("click",itsClicked);
-
-
+element.style.backgroundColor = "#808080";
+element.style.width = "200px";
+element.style.height = "200px";
+element.style.float = "left";
+element.style.margin = "5px";
 
 function itsClicked(event) { 
-   
-   event.target.style.backgroundColor = "#999";
-
-    //get the attribute
     let response = event.target.getAttribute("data-response");
-    event.target.innerHTML = response;
+    event.target.style.backgroundColor = response;
+    event.target.innerHTML = "Hooray!";
+
+    console.log(response);
 
 }
+

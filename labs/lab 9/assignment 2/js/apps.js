@@ -22,14 +22,8 @@ function breakString() {
     
         if((curGuess == "clear") || (curGuess == "water") || (curGuess == "tires")){
             foundFlag = true;
-            break; //stop looping
             
         }
-
-        // if((curGuess == "clear"){
-            
-            
-        // }
        
     }
 
@@ -40,11 +34,11 @@ function breakString() {
         }
 
     if (foundFlag == true) {
-        trueCount = trueCount + 1 ;
+        trueCount = trueCount + 1;
     }
     
     txtSentence.value = "";
-    txtOutput2.innerHTML = trueCount + " " + "bad words found";
+    txtOutput2.innerHTML = trueCount + " " + "bad word(s) found";
     
 }
 
