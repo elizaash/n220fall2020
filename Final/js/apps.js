@@ -20,7 +20,7 @@
 //Set up the P5 canvas to place all visual elements on. It is important to add a background 
 //color so that any shapes appear on the page.
     function setup() {
-        createCanvas(500, 200)
+        createCanvas(700, 200)
     }
 
     let bgColor = '#87ceeb';
@@ -35,7 +35,7 @@
     let rectYSpeed = 0;
     //Create variables for the poo
     let pooX = 300;
-    let pooY = 150;
+    let pooY = 115;
     let pooSize = 1;
     //Create the background with a rect and a for loop determining how many trees there are and where they are 
     //on the x axis
@@ -52,13 +52,13 @@
         image(home, 100, 45, 90, 100);
 
         
-
+//Create trees and space them using for loop and array
 
         for( var i = 0; i < treeX.length; i++){
 
             image(tree, treeX[i], 50, 100, 100);
         }
-//Create the tree 
+
 
 // Create the grass
         rect(0,130,width,100);
@@ -120,7 +120,6 @@ function feedMe() {
 function makePoo(){
     pooSize = 20;
     pooX = rectX;
-
 }
 
 //Create the function that will clear the poo off the screen
@@ -130,17 +129,23 @@ function cleanPoo(){
 
 //Create the function that will make the bg color daytime
 function makeDay(){
-
     bgColor = '#87ceeb';
     grassColor= "#7cfc00";
 }
 
 //Create the function that will make the bg color nightime
 function makeNight(){
-
     bgColor = "#191970";
     grassColor= "#006400";
 }
+
+function goHome(){ 
+    rectX = 122;
+
+}
+
+
+
 
 //Access the elements in the HTML file
 let txtName = document.getElementById("txtName");
@@ -148,7 +153,7 @@ let dvResult = document.getElementById("dvResult");
 
 //Save the pet's name based on used input and manipulation with DOM. Will show the name message when saved
 function enterName() {
-    let fullSentence = "Hello my name is" + " " + txtName.value;
+    let fullSentence = "Your pet is named" + " " + txtName.value;
     
     console.log(fullSentence);
     dvResult.innerHTML = fullSentence;

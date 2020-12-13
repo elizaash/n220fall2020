@@ -7,14 +7,11 @@
     <!-- Style-->
     <style>
          #font {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+            font-family: Arial, Helvetica, sans-serif;
              }    
              
              
     </style>
-
-
 
 </head>
 <body>
@@ -22,32 +19,36 @@
 <!-- Title and Instructions--> 
 <div id="font">
     <h1>Virtual Pet</h1>
-    <h3>Congratulations! You've just adopted your new pet!</h3>
-    <h3>Use the arrow keys to move around the virtual world.</h3>
+    <h3>Congratulations on adopting your new pet!</h3>
+    
 </div>
 
 
 <!-- Name Input-->
-<p>Name your pet:</p> 
+<p id="font"> Name your pet:</p> 
     <input id="txtName"/>
     <button onclick= enterName()>Save Name</button>
     <br/>
     <br/>
+    <div id = "dvResult"></div>
+    <br/>
 
 
 <!-- Buttons-->
-<div id="buttons">
+<div id="font">
 <button onclick="feedMe()">Grow</button>
 <button onclick="makePoo()">Poo</button>
 <button onclick="cleanPoo()">Clean Up</button>
 <button onclick="makeDay()">Day Mode</button>
 <button onclick="makeNight()">Night Mode</button>
+<button onclick="goHome()">Home</button>
 </div>
 
-<br/>
 <!-- Input Result-->
-<div id = "dvResult"></div>
-<br />
+
+
+<p id="font">Use the LEFT and RIGHT arrow keys to move around the virtual world.< > </p>
+
 
 
 
