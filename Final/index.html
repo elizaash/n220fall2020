@@ -8,14 +8,37 @@
     <style>
          #font {
             font-family: Arial, Helvetica, sans-serif;
+            text-align:center;
              }    
-             
+
+
+        .content {
+            max-width: 500px;
+            margin: auto;
+            } 
+
+        .result {
+            max-width: 500px;
+            float: left;
+            margin-right: 50px;
+        }
+
+        .buttons{
+            max-width: 200px;
+            height: 100px;
+            float: left;
+
+
+        }
+    
+        }
+
              
     </style>
 
 </head>
 <body>
-
+<div class="content">
 <!-- Title and Instructions--> 
 <div id="font">
     <h1>Virtual Pet</h1>
@@ -25,33 +48,33 @@
 
 
 <!-- Name Input-->
-<p id="font"> Name your pet:</p> 
+<div class= "result">
     <input id="txtName"/>
-    <button onclick= enterName()>Save Name</button>
-    <br/>
-    <br/>
+    <button onclick= enterName()> Name Pet</button>
     <div id = "dvResult"></div>
     <br/>
-
+</div>
 
 <!-- Buttons-->
-<div id="font">
-<button onclick="feedMe()">Grow</button>
+<div class="buttons" id="font">
+<button onclick="feedMe()">Feed</button>
+<button onclick="growMe()">Grow</button>
 <button onclick="makePoo()">Poo</button>
 <button onclick="cleanPoo()">Clean Up</button>
 <button onclick="makeDay()">Day Mode</button>
 <button onclick="makeNight()">Night Mode</button>
 <button onclick="goHome()">Home</button>
+<button onclick="goShop()">Shop</button>
+
 </div>
 
 <!-- Input Result-->
 
 
-<p id="font">Use the LEFT and RIGHT arrow keys to move around the virtual world.< > </p>
+<p id="font">Use ARROW KEYS to move around.</p>
 
 
-
-
+</div>
     <script src = "https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
     <script src="js/apps.js"></script>
 </body>
