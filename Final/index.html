@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Style-->
+    <style>
+         #font {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+             }    
+             
+             
+    </style>
+
+
+
+</head>
+<body>
+
+<!-- Title and Instructions--> 
+<div id="font">
+    <h1>Virtual Pet</h1>
+    <h3>Congratulations! You've just adopted your new pet!</h3>
+    <h3>Use the arrow keys to move around the virtual world.</h3>
+</div>
+
+
+<!-- Name Input-->
+<p>Name your pet:</p> 
+    <input id="txtName"/>
+    <button onclick= enterName()>Save Name</button>
+    <br/>
+    <br/>
+
+
+<!-- Buttons-->
+<div id="buttons">
+<button onclick="feedMe()">Grow</button>
+<button onclick="makePoo()">Poo</button>
+<button onclick="cleanPoo()">Clean Up</button>
+<button onclick="makeDay()">Day Mode</button>
+<button onclick="makeNight()">Night Mode</button>
+</div>
+
+<br/>
+<!-- Input Result-->
+<div id = "dvResult"></div>
+<br />
+
+
+
+    <script src = "https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+    <script src="js/apps.js"></script>
+</body>
+</html>
